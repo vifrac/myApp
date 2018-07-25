@@ -1,0 +1,14 @@
+<div class="col-sm-4">
+<%= link_to 'New', new_image_path %>     
+</div>
+
+<h1>ImageGram</h1>
+
+<% if user_signed_in? %>
+	<h1>Bienvenido <%= current_user.email %></h1>
+	<div class="row">
+	    <%= render @images %>
+	</div>
+<% else %>
+	<p>Por favor inicie sesiòn para cer las imagenes</p>
+<% end %>
