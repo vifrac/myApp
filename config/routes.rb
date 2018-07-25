@@ -5,4 +5,11 @@ Rails.application.routes.draw do
 	root to: "home#index"
 	resources :images
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
+  	namespace 'api' do
+	    namespace 'v1' do
+	      post 'auth_user' => 'authentication#authenticate_user'
+	    end
+	end
+
 end
