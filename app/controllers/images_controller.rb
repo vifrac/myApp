@@ -5,7 +5,7 @@ class ImagesController < ApplicationController
 	
 
 	def index
-		@images = Image.all
+		@images = Image.where user_id: current_user.id
 	end
 
 	def new
@@ -13,7 +13,7 @@ class ImagesController < ApplicationController
 	end
 
 	def create
-		@image = Image.new images_params
+		@image = current_user.images.new images_params
 		@image.save
 		redirect_to '/images' #redirecciona a una nueva vista
 	end
