@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   	namespace 'api' do
 	    namespace 'v1' do
 	      post 'auth_user' => 'authentication#authenticate_user'
+	      post "sign_up" => 'registration#create'
 	    end
 	end
 
