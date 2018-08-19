@@ -19,3 +19,5 @@ end
 
 video_30_curso_ruby = Video.new('objetos y clases')
 puts video_30_curso_ruby.title
+
+# prueba para ver los cambios de carga con ssh
