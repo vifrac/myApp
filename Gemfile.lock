@@ -1,6 +1,6 @@
 GIT
-  remote: git://github.com/plataformatec/devise.git
-  revision: b8f644198d34e96039b84b69842ecb4edffa4664
+  remote: https://github.com/plataformatec/devise.git
+  revision: acc45c5a44c45b252ccba65fd169a45af73ff369
   specs:
     devise (4.4.3)
       bcrypt (~> 3.0)
@@ -50,6 +50,7 @@ GEM
       minitest (~> 5.1)
       tzinfo (~> 1.1)
     arel (7.1.4)
+    ast (2.4.0)
     autoprefixer-rails (8.6.5)
       execjs
     bcrypt (3.1.12)
@@ -82,6 +83,7 @@ GEM
       activesupport (>= 4.2.0)
     i18n (1.0.1)
       concurrent-ruby (~> 1.0)
+    jaro_winkler (1.5.1)
     jbuilder (2.7.0)
       activesupport (>= 4.2.0)
       multi_json (>= 1.2)
@@ -110,9 +112,13 @@ GEM
     nokogiri (1.8.4-x86-mingw32)
       mini_portile2 (~> 2.3.0)
     orm_adapter (0.5.0)
+    parallel (1.12.1)
+    parser (2.5.1.2)
+      ast (~> 2.4.0)
     pg (1.0.0)
     pg (1.0.0-x86-mingw32)
     popper_js (1.12.9)
+    powerpack (0.1.2)
     puma (3.11.4)
     rack (2.0.5)
     rack-test (0.6.3)
@@ -140,6 +146,7 @@ GEM
       method_source
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
+    rainbow (3.0.0)
     rake (12.3.1)
     rb-fsevent (0.10.3)
     rb-inotify (0.9.10)
@@ -147,6 +154,15 @@ GEM
     responders (2.4.0)
       actionpack (>= 4.2.0, < 5.3)
       railties (>= 4.2.0, < 5.3)
+    rubocop (0.58.2)
+      jaro_winkler (~> 1.5.1)
+      parallel (~> 1.10)
+      parser (>= 2.5, != 2.5.1.1)
+      powerpack (~> 0.1)
+      rainbow (>= 2.2.2, < 4.0)
+      ruby-progressbar (~> 1.7)
+      unicode-display_width (~> 1.0, >= 1.0.1)
+    ruby-progressbar (1.10.0)
     sass (3.5.6)
       sass-listen (~> 4.0.0)
     sass-listen (4.0.0)
@@ -177,6 +193,7 @@ GEM
       tzinfo (>= 1.0.0)
     uglifier (4.1.14)
       execjs (>= 0.3.0, < 3)
+    unicode-display_width (1.4.0)
     warden (1.2.7)
       rack (>= 1.0)
     web-console (3.6.2)
@@ -205,6 +222,7 @@ DEPENDENCIES
   pg (>= 0.18, < 2.0)
   puma (~> 3.0)
   rails (~> 5.0.7)
+  rubocop
   sass-rails (~> 5.0)
   turbolinks (~> 5)
   tzinfo-data

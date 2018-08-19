@@ -30,7 +30,7 @@ module Api
 
             def update 
                 image = Image.find(params[:id])
-                if image.update_attributes(image_params)
+                if image.update(image_params)
                     render json: {status: 'SUCCESS', message: 'imagen editada', data: image}, status: :ok
                 else
                     render json: {status: 'ERROR', message: 'imagen no editada', data: image}, status: :unprocessable_entity
